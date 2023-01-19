@@ -1,0 +1,178 @@
+body {
+    margin:auto;
+    width:1024px;
+    padding:10px;
+    background-color:#f4f2f2;
+    font-size:14px;
+    font-family:Verdana;
+    padding-left: 30px;
+}
+
+html { 
+    background-color: #ebebeb;
+}
+
+table {
+   border: 1px solid;
+   border-spacing: 0;
+}
+
+th {
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+td, th {
+    padding: 3px 1em 3px 1em;
+}
+
+tbody > tr:nth-child(2n+1)  {
+    background-color: rgb(222, 222, 222);
+}
+
+thead > tr  {
+    background-color: rgb(200, 197, 197);
+}
+
+blockquote {
+    font-style: italic;
+    color: #1f1f1f;
+    box-shadow: inset 5px 0 5px -5px #000000;
+    padding-left: 1em;
+    margin-left: 1em;
+}
+
+figure {
+    margin-left: 1em;
+}
+
+figcaption {
+    font-size: 0.8em;
+    font-style: italic;
+}
+
+.objective {
+    font-style: italic;
+    font-size: 0.8em;
+}
+
+h1 {
+    margin-left: -20px;
+}
+
+h2 {
+    font-variant: small-caps;
+    margin-left: -15px;
+}
+
+h4 { 
+    margin-top: 3em;
+    margin-bottom: 5px;
+    margin-left: -15px;
+    text-decoration: underline;
+}
+
+aside {
+    width: 40%;
+    padding-left: .5rem;
+    margin: 1em 0 1em .5rem;
+    float: right;
+    box-shadow: inset 5px 0 5px -5px #29627e;
+    font-style: italic;
+    color: #29627e;
+}
+
+aside > p {
+    margin: .5rem;
+    break-after: always;
+}
+
+hr { 
+    width: 40%;
+    color: lightgray;
+}
+
+.eval {
+    margin: 2em;
+}
+
+.evaltext0, .evaltext1, .evaltext2, .evaltext3, .evaltext4, .evaltext5 { 
+    padding-left: 1em;
+}
+
+.evaltext0 { 
+    border-left: 5px solid black;
+}
+
+.evaltext1 { 
+    border-left: 5px solid red;
+}
+
+.evaltext2 { 
+    border-left: 5px solid orange;
+}
+
+.evaltext3, .evaltext4, .evaltext5 { 
+    border-left: 5px solid green;
+}
+
+.remarque li span {
+    text-decoration: underline;   
+    float: none
+}
+
+.msgblock {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 60em;
+    min-width: 20em;
+    padding: 0.5em;
+}
+
+.warning {
+    background-color: #f0a395;
+    box-shadow: inset 5px 0 5px -5px #880101;
+}
+
+.info {
+    background-color: #cafcfc;
+    box-shadow: inset 5px 0 5px -5px #00a4a4;
+}
+
+.todo {
+    background-color: #e9fd8d;
+    color: black;
+    box-shadow: inset 5px 0 5px -5px #e05d06;
+}
+
+.must:before, .should:before, .objective:before {
+    color: white;
+    font-weight: bold;
+    margin-right: 1em;
+}
+
+.must:before {
+    content: "\00a0MUST\00a0";
+    background-color: red;
+}
+
+.should:before {
+    content: "\00a0SHOULD\00a0";
+    background-color: chocolate;
+}
+
+.objective:before {
+    content: " \00a0OBJECTIVE\00a0";
+    background-color: black;
+}
+
+.must, .should, .objective {
+    font-size: 0.8em;
+    padding-left: 2em;
+}
+
+.center {
+    text-align: center;
+}
+
+

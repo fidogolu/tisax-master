@@ -1,0 +1,968 @@
+---
+catalogs:
+- catalog: Information Security
+  chapters:
+  - chapter: IS Policies and Organization
+    isa: 1
+    assessments:
+    - name: Information Security Policies
+      isa: 1.1    
+      questions:
+      - name: To what extent are information security policies available?
+        isa: 1.1.1
+        reference: 'ISO 27001: A.5.1.1, A.5.1.2'
+        objective: The organization needs at least one information security policy. This reflects the importance and significance of information security and is adapted to the organization. Additional policies may be appropriate depending on the size and structure of the organization.
+        must: |
+          * The requirements for information security have been determined and documented:
+            + The requirements are adapted to the organization’s goals,
+            + A policy is prepared and is released by the organization.
+          * The policy includes objectives and the significance of information security within the organization. 
+        should: |
+          + The information security requirements based on the strategy of the organization, legislation and contracts are taken into account in the policy.
+          + The policy indicates consequences in case of non-conformance. 
+          + Further relevant information security policies are prepared.
+          + Periodic review and, if required, revision of the policies are established.
+          + The policies are made available to employees in a suitable form (e.g. intranet).
+          + These policies (or extracts thereof) are provided to external business partners depending on the respective case.
+          + Employees and external business partners are informed of any changes relevant to them.
+    - name: Organization of Information Security
+      isa: 1.2 
+      questions:
+      - name: To what extent is information security managed within the organization?
+        isa: 1.2.1
+        reference: 'ISO 27001: 4'
+        objective: Only if information security is part of the strategic goals of an organization, information security can be implemented in an organization in a sustainable manner. The information security management system (ISMS) is a control mechanism used by the organization’s management to ensure that information security is the result of sustainable management rather than that of mere coincidence and individual effort.
+        must: |
+            + The scope of the ISMS (the organization managed by the ISMS) is defined.
+            + The organization's requirements for the ISMS are determined.
+            + The organizational management has commissioned and approved the ISMS.
+            + The ISMS provides the organizational management with suitable monitoring and control means (e.g. management review).
+            + Applicable controls have been determined (e.g. ISO 27001 Statement of Applicability, completed VDA ISA catalog).
+            + The effectiveness of the ISMS is regularly reviewed by the management.
+      - name: To what extent are information security responsibilities organized?
+        isa: 1.2.2
+        reference: 'ISO 27001: A.6.1.1, A.6.1.2'
+        objective: A successful ISMS requires clear responsibilities within the organization.
+        must: |
+          + Responsibilities for information security within the organization are defined, documented and assigned.
+          + The responsible employees are defined and qualified for their task.
+          + The required resources are available.
+          + The contact persons are known within the organization and to relevant business partners.
+        should: |
+          + There is a definition and documentation of an adequate information security structure within the organization.
+      - name: To what extent are information security requirements taken into account in projects?
+        isa: 1.2.3
+        reference: 'ISO 27001: A.6.1.5'
+        objective: For project implementation, it is important to consider the information security requirements. This applies to projects within the organization regardless of their type. By appropriately establishing the information security process in the project management procedures of the organization, any overlooking of requirements is prevented.
+        should: |
+          + Projects are classified while taking into account the information security requirements.
+        must: | 
+          + The procedure and criteria for the classification of projects are documented.
+          + During an early stage of the project, risk assessment is conducted based on the defined procedure and repeated in case of changes to the project.
+          + For identified information security risks, measures are derived and taken into account in the project.
+      - name: To what extent are the responsibilities between external IT service providers and the own organization defined?
+        isa: 1.2.4
+        reference: 'ISO 27017: CLD.6.3.1'
+        objective: It is important, that a common understanding of the division of responsibilities exists and that the implementation of all security requirements is ensured. Therefore, when using external IT service providers and IT services, the responsibilities regarding the implementation of information security measures are to be defined and verifiably documented.
+        must: |
+          + The concerned services and IT services used are identified.
+          + The security requirements relevant to the IT service are determined:
+          + The organization responsible for implementing the requirement is defined and aware of its responsibility.
+          + Mechanisms for shared responsibilities are specified and implemented.
+          + The responsible organization fulfils its respective responsibilities.
+        should: |
+          + In case of IT services, configuration has been conceived, implemented and documented based on the necessary security requirements.
+          + The responsible staff is adequately trained.
+    - name: Asset Management
+      isa: 1.3
+      questions:
+      - name: To what extent are information assets identified and recorded? 
+        isa: 1.3.1
+        reference: 'ISO 27001: A.8.1.1, A.8.1.2'
+        objective: It is important for each organization to know the information constituting its essential assets (e.g. business secrets, critical business processes, know-how, patents). They are referred to as information assets. An inventory ensures that the organization obtains an overview of its information assets. Moreover, it is important to know the supporting assets (e.g. IT systems, services/IT services, employees) processing these information assets.
+        must: |
+          + The information assets being of relevance to the organization are identified and recorded.
+            - A person responsible for these information assets is assigned.
+          + The supporting assets processing the information assets are identified and recorded:
+            - A person responsible for these supporting assets is assigned.
+        should: |
+          + A catalog of the relevant information assets exists:
+            - The corresponding supporting assets are assigned to each relevant information asset,
+            - The catalog is subject to regular review.
+      - name: To what extent are information assets classified and managed in terms of their protection needs?
+        isa: 1.3.2
+        reference: 'ISO 27001: A.8.2.1, A.8.2.2, A.8.2.3, A.8.3.2'
+        objective: The objective of classifying information assets is the consistent determination of their protection needs. For this purpose, the value the information has for the organization is determined based on the protection goals of information security (confidentiality, integrity and availability) and classified according to a classification scheme. This enables the organization to implement adequate protective measures.
+        must: |
+          + A consistent scheme for the classification of information assets with regard to the protection goal of confidentiality is available.
+          + Evaluation of the identified information assets is carried out according to the defined criteria and assigned to the existing classification scheme. 
+          + Specifications for the handling of supporting assets (e.g. identification, correct handling, transport, storage, return, deletion/disposal) depending on the classification of information assets are in place and implemented.
+        should: |
+          + The protection goals of integrity and availability are taken into consideration.
+      - name: To what extent is it ensured that only evaluated and approved external IT services are used for processing the organization’s information assets?
+        isa: 1.3.3
+        reference: 'ISO 27017: 14.1.1'
+        objective: Particularly in the case of external IT services that can be used at relatively low cost or free of charge, there is an increased risk that procurement and commissioning will be carried out without appropriate consideration of the information security requirements and that security therefore is not ensured. 
+        must: |
+          + External IT services are not used without explicit assessment and implementation of the information security requirements:
+            - A risk assessment of the external IT services is available,
+            - Legal, regulatory and contractual requirements are considered.
+          + The external IT services have been harmonized with the protection need of the processed information assets.
+        should: |
+          + Requirements regarding the procurement, commissioning and release associated with the use of external IT services are determined and fulfilled.
+          + A procedure for release in consideration of the protection need is established.
+          + External IT services and their approval are documented.
+          + It is verified at regular intervals that only approved external IT services are used.
+    - name: IS Risk Management
+      isa: 1.4
+      questions:
+      - name: To what extent are information security risks managed?
+        isa: 1.4.1
+        reference: 'ISO 27001: 6.1.2, 6.1.3'
+        objective: Information security risk management aims at the timely detection, assessment and addressing of risks in order to achieve the protection goals of information security. It thus enables the organization to establish adequate measures for protecting its information assets under consideration of the associated prospects and risks. It is recommended to keep the information security risk management of an organization as simple as possible such as to enable its effective and efficient operation. 
+        must: |
+          + Risk assessments are carried out both at regular intervals and in response to events.
+          + Information security risks are appropriately assessed (e.g. for probability of occurrence and potential damage).
+          + Information security risks are documented.
+          + A responsible person (risk owner) is assigned to each information security risk. This person is responsible for the assessment and handling of the information security risks.
+        should: |
+          + A procedure is in place defining how to identify, assess and address information security risks within the organization.
+          + Criteria for the assessment and handling of information security risks exist.
+          + Measures for handling information security risks and the persons responsible for these are specified and documented:
+            - A plan of measures or an overview of their state of implementation exists.
+          + In case of changes to the environment (e.g. organizational structure, location, changes to regulations), reassessment is carried out in a timely manner.
+    - name: Assessments
+      isa: 1.5
+      questions:
+      - name: To what extent is compliance with information security ensured in procedures and processes?
+        isa: 1.5.1
+        reference: 'ISO 27001: A.18.2.2, A.18.2.3'
+        objective: It is not sufficient to define information security requirements and to prepare and publish policies. It is important to regularly review their effectiveness.
+        must: |
+          + Observation of policies is verified throughout the organization.
+          + Information security policies and procedures are reviewed at regular intervals.
+          + Measures for correcting potential non-conformities (deviations) are initiated and pursued.
+          + Compliance with information security requirements (e.g. technical specifications) is verified at regular intervals.
+          + The results of the conducted reviews are recorded and retained.
+        should: |
+          + A plan for content and framework conditions (time schedule, scope, controls) of the reviews to be conducted is provided.
+      - name: To what extent is the ISMS reviewed by an independent authority?
+        isa: 1.5.2
+        reference: 'ISO 27001: A.18.2.1'
+        objective: As an essential control mechanism, assessing the effectiveness of the ISMS from merely an internal point of view is insufficient. Additionally, an independent and therefore objective assessment shall be obtained at regular intervals and in case of significant changes.
+        must: |
+          + Information security reviews are carried out by an independent and competent body at regular intervals and in case of significant changes.
+          + Measures for correcting potential deviations are initiated and pursued.
+        should: |
+          + The results of conducted reviews are documented and reported to the management of the organization.
+    - name: Incident Management
+      isa: 1.6
+      questions:
+      - name: To what extent are information security events processed?
+        isa: 1.6.1
+        reference: 'ISO 27001: A.16.1.1, A16.1.2'
+        objective: Organized processing of information security events aims at limiting potential damage and preventing recurrence.
+        must: |
+          + A definition of information security events/vulnerabilities exists.
+          + A procedure for reporting and recording information security events/vulnerabilities is defined and implemented. 
+          + The following aspects are considered:
+            - Reaction to information security events/vulnerabilities
+            - Report form and channel
+            - Processing body
+            - Feedback procedure
+            - Indications regarding technical and organizational measures (e.g. disciplinary action).
+          + Procedures for ensuring traceability in case of information security events/vulnerabilities are established and documented.
+          + Information security events/vulnerabilities are assessed and documented in order to ensure traceability.
+          + An adequate reaction to information security events/vulnerabilities is given.
+          + A strategy for an adequate reaction to events of information security violations:
+            - This includes escalation procedures, remedial actions and communication to relevant internal and external bodies as well as a procedure for deciding whether a cybercriminal attack will be prosecuted.
+        should: |
+          + Information security events/vulnerabilities (problem management) are analyzed.
+          + Measures to prevent further occurrence of similar information security events are defined and implemented.
+  - chapter: Human Resources
+    isa: 2
+    assessments:
+    - isa: 2.1
+      questions:
+      - name: To what extent is the qualification of employees for sensitive work fields ensured?
+        isa: 2.1.1
+        reference: 'ISO 27001: A.7.1.1'
+        objective: Competent, reliable and trustworthy employees are a key to information security within the organization Therefore, it is important to check the qualifications of potential employees (e.g. applicants) to an appropriate extent. 
+        must: |
+          + Sensitive work fields and jobs are determined.
+          + The requirements for employees with respect to their job profiles are determined and fulfilled.
+          + The identity of potential employees is verified (e.g. checking identity documents).
+        should: |
+          + The personal suitability of potential employees is verified by means of simple methods (e.g. job interview).
+          + An extended suitability verification depending on the respective work field and job is conducted. (e.g. assessment center, psychological analysis, checking of references, certificates and diploma, checking of certificates of conduct, checking of professional and private background).
+      - name: To what extent is all staff contractually bound to comply with information security policies?
+        isa: 2.1.2
+        reference: 'ISO 27001: A.7.1.2, A.7.3.1'
+        objective: Organizations are subject to legislation, regulations and internal policies. Already when hiring staff, it must be ensured that employees commit to compliance with the policies and are aware of the consequences of misconduct.
+        must: |
+          + A non-disclosure obligation is in effect.
+          + An obligation to comply with the information security policies is in effect.
+        should: |
+          + A non-disclosure obligation beyond the employment contract or order is in effect.
+          + Information security aspects are considered in the employment contracts of the staff.
+          + A procedure for handling violations of said obligations is described.
+      - name: To what extent is staff made aware of and trained with respect to the risks arising from the handling of information?
+        isa: 2.1.3
+        reference: 'ISO 27002: A.7.2.1, A.7.2.2'
+        objective: If the requirements and risks of information security are not known to the employees, there is a risk of misconduct resulting in damage to the organization. Therefore, it is important that information security is internalized and practiced as a natural part of their work. 
+        must: |
+          + Employees are trained and made aware.
+        should: |
+          + A concept for awareness and training of employees is prepared. As a minimum, the following aspects are taken into account:
+            - Information security policy,
+            - Reports of information security events,
+            - Reaction to occurrence of malware,
+            - Policies regarding user accounts and login information (e.g. password policy),
+            - Compliance issues of information security,
+            - Requirements and procedures regarding the use of non-disclosure agreements when sharing information requiring protection,
+            - Use of external IT services.
+          + Target groups for training and awareness measures (e.g. new employees, administrators, employees having access to customer networks) are identified and taken into account in a training concept.
+          + The concept has been approved by the responsible management.
+          + Training and awareness measures are carried out both at regular intervals and in response to events.
+          + Participation in training and awareness measures is documented. 
+          + Contact persons for information security are known to employees.
+      - name: To what extent is teleworking regulated?
+        isa: 2.1.4
+        reference: 'ISO 27001: A.6.2'
+        objective: Working outside the specifically defined security zones (teleworking) creates particular risks requiring corresponding protective measures.
+        must: |
+          + The requirements for teleworking are determined and fulfilled. The following aspects are considered:
+            - Secure handling of and access to information (in both electronic and paper form) while considering the protection needs and the contractual requirements applying to private (e.g. home office) and public surroundings (e.g. during travels),
+            - Behavior in private surroundings,
+            - Behavior in public surroundings,
+            - Measures for protection from theft (e.g. in public surroundings),
+          + The organization’s network is accessed via a secured connection (e.g. VPN) and strong authentication.
+        should: |
+          + The following aspects are considered:
+            - Measures for travelling (e.g. viewing by authorities),
+            - Measures for travelling to security-critical countries.
+          + Employee awareness.
+  - chapter: Physical Security and Business Continuity
+    isa: 3
+    assessments:
+    - isa: 3.1
+      questions:
+      - name: To what extent are security zones managed to protect information assets?
+        isa: 3.1.1
+        reference: 'ISO 27001: A.11.1'
+        objective: Security zones provide physical protection of information assets. The more sensitive the information assets to be processed are the more protective measures are required.
+        must: |
+          + A security zone concept including the associated protective measures based on the requirements for the handling of information assets is in place:
+            - Physical conditions (e.g. premises / buildings / spaces) are taken into account in the definition of security zones,
+            - This also includes delivery and shipping areas.
+          + The defined protective measures are implemented.
+          + The code of conduct for security zones is known to all persons involved.
+        should: |
+          + Procedures for allocation and revocation of access rights are established.
+          + Visitor management policies (including registration and escorting of visitors) are defined.
+          + Policies for carrying along and using mobile IT devices and mobile data storage devices (e.g. registration before they are carried along, identification obligations) are defined and implemented.
+          + Network/infrastructure components (own or customer networks) are protected against unauthorized access.
+          + External properties used for storing and processing information assets are taken into account in the security zone concept (e.g. storage rooms, garages, workshops, test tracks, data processing centers)."
+      - name: To what extent is information security ensured in exceptional situations?
+        isa: 3.1.2
+        reference: 'ISO 27001: A.12.3, A.17.1, A.17.2'
+        objective: Exceptional situations (e.g. natural disasters, physical attacks, cyber attacks, exceptional social situations, incidents or infrastructure failures of significant impact) present a great challenge to the organization. Good preparation helps to ensure that information security risks are adequately considered even in exceptional situations.
+        must: |
+          + Possible exceptional situations are identified and recorded.
+          + Potentially endangered infrastructure components (e.g. access points, IT systems) are identified and recorded. 
+          + Measures for limiting the impact of threats are identified and implemented.
+          + For exceptional situations, information security aspects are taken into consideration in methods, processes and procedures.
+        should: |
+          + Emergency plans are defined and reviewed regularly.
+          + Physical security is generally maintained also in exceptional situations.
+          + IT services are maintained also during exceptional situations
+            - Restoration of data and applications by means of backup and redundancy concepts.
+          + Strategies for avoiding permanent loss of information are defined.
+          + Adequate protective measures (e.g. fire detection system, fire protection, water detector) are implemented and regularly reviewed.
+          + A redundant supply for media (e.g. electricity, communication connections) is provided.
+          + Consideration of information security in Business Continuity Management.
+          + Information security measures for events of crisis are tested regularly.
+
+      - name: To what extent is the handling of supporting assets managed?
+        isa: 3.1.3
+        reference: 'ISO 27001:  A.8.1.3 and A.8.1.4'
+        objective: During their lifecycle (e.g. usage, disposal), supporting assets are subject to risks such as loss, theft or unauthorized viewing. 
+        must: |
+          + The requirements for the handling of supporting assets (e.g. transport, storage, repair, loss, return, disposal) are determined and fulfilled. 
+
+      - name: To what extent is the handling of mobile IT devices and mobile data storage devices managed?
+        isa: 3.1.4
+        reference: 'ISO 27001: A.6.2, A.8.3'
+        objective: Mobile IT devices (e.g. notebooks, tablets, smartphones) and mobile data storage devices (e.g. SD cards, hard drives) are generally used not only on the premises of an organization, but also in mobile applications. This presents an increased risk with respect to e.g. loss or theft.
+        must: |
+          + The requirements for mobile IT devices and mobile data storage devices are determined and fulfilled. The following aspects are considered: 
+            - Encryption,
+            - Access protection (e.g. PIN, password),
+            - Marking (also considering requirements for use in the presence of customers).
+        should: |
+          + Registration of the IT devices.
+          + Users are informed of missing data protection on mobile devices.
+  - chapter: Identity and Access Management
+    isa: 4
+    assessments:
+    - name: Identity Management
+      isa: 4.1
+      questions:
+      - name: To what extent is the use of identification means managed?
+        isa: 4.1.1
+        reference: 'ISO 27001: A.9.2.6'
+        objective: To check the authorization for both physical access and electronic access, means of identification such as keys, visual IDs or cryptographic tokens are often used. The security features are only reliable if the use of such identification means is handled adequately.
+        must: |
+          + The requirements for the handling of identification means over the entire lifecycle are determined and fulfilled. The following aspects are considered:
+            - Creation, handover, return and destruction,
+            - Validity periods,
+            - Traceability,
+            - Handling of loss.
+        should: |
+          + Identification means can be produced under controlled conditions only.
+      - name: To what extent is the user access to network services, IT systems and IT applications secured?
+        isa: 4.1.2
+        reference: 'IS0 27001: A.9.1, A.9.4.2'
+        objective: Only securely identified (authenticated) users are to gain access to IT systems. For this purpose, the identity of a user is securely determined by suitable procedures.
+        must: |
+          + The procedures for user authentication have been selected based on a risk assessment. Possible attack scenarios have been considered (e.g. direct accessibility via the internet).
+          + The procedures applied for user authentication comply with the current state of the art.
+        should: |
+          + The user authentication procedures are defined and implemented based on the business-related and security-relevant requirements:
+            - Users are authenticated at least by means of strong passwords according to the state of the art.
+          + Superior procedures are used for the authentication of privileged user accounts (e.g. Privileged Access Management, two-factor authentication).
+      - name: To what extent are user accounts and login information securely managed and applied?
+        isa: 4.1.3
+        reference: 'IS0 27001: A.9.2.1, A.9.2.2, A.9.2.4, A.9.3.1, A.9.4.3'
+        objective: Access to information and IT systems is provided via validated user accounts assigned to a person. It is important to protect login information and to ensure the traceability of transactions and accesses.
+        must: |
+          + The creating, changing and deleting of user accounts is conducted.
+          + Unique and personalized user accounts are used.
+          + The use of “collective accounts is regulated (e.g. restricted to cases where traceability of actions is dispensable).
+          + User accounts are disabled immediately after the user has resigned from or left the organization (e.g. upon termination of the employment contract).
+          + User accounts are regularly reviewed.
+          + The login information is provided to the user in a secure manner.
+          + A policy for the handling of login information is defined and implemented. The following aspects are considered:
+            - No disclosure of login information to third parties
+            - not even to persons of authority
+            - under observation of legal parameters
+            - No writing down or unencrypted storing of login information
+            - Immediate changing of login information whenever potential compromising is suspected
+            - No use of identical login information for business and non-business purposes
+            - Changing of temporary or initial login information following the 1st login   - Requirements for the quality of authentication information (e.g. length of password, types of characters to be used).
+          + The login information (e.g. passwords) of a personalized user account must be known to the assigned user only.
+        should: |
+          + A basic user account with minimum access rights and functionalities is existent and used.
+          + Default accounts and passwords pre-configured by manufacturers are disabled (e.g. by blocking or changing of password).
+          + User accounts are created or authorized by the responsible body.
+          + Creating user accounts is subject to an approval process (four-eyes principle).
+          + User accounts of service providers are disabled upon completion of their task.
+          + Deadlines for disabling and deleting user accounts are defined.
+          + The use of default passwords is technically prevented.
+          + Where strong authentication is applied, the use of the medium (e.g. ownership factor) is secure.
+          + User accounts are reviewed at regular intervals. This also includes user accounts in customers' IT systems.
+    - name: Access Management
+      isa: 4.2
+      questions:
+      - name: To what extent are access rights assigned and managed?
+        isa: 4.2.1
+        reference: 'ISO 27001: A.9.2.3, A.9.2.5, A.9.4.1'
+        objective: The management of access rights ensures that only authorized users have access to information and IT applications. For this purpose, access rights are assigned to user accounts.
+        must: |
+          + The requirements for the management of access rights (authorization) are determined and fulfilled. The following aspects are considered:
+            - Procedure for application, verification and approval,
+            - Application the minimum (“need-to-know) principle.
+          + The access rights granted for normal and privileged user accounts and technical accounts are verified at regular intervals also within IT systems of customers.
+        should: |
+          + Strategies for authorizing access to information are prepared.
+          + Authorization roles are used.
+          + Rights are allocated on a need-to-use basis and according to the role and/or area of responsibility. 
+          + Normal user accounts are not granted privileged access rights.
+          + The access rights of a user account are adapted after the user has changed (e.g. to another field of responsibility).
+  - chapter: IT Security / Cyber Security
+    isa: 5
+    assessments:
+    - name: Cryptography
+      isa: 5.1
+      questions:
+      - name: To what extent is the use of cryptographic procedures managed?
+        isa: 5.1.1
+        reference: 'ISO 27001: A.10.1'
+        objective: When using cryptographic procedures, it is important to consider risks in the field of availability (lost key material) as well as risks due to incorrectly applied procedures in the fields of integrity and confidentiality (poor algorithms/protocols or insufficient key strengths).
+        must: |
+          + All cryptographic procedures used (e.g. encryption, signature, and hash algorithms, protocols, applications) provide the security required by the respective application field according to the state of the art.
+          + The legal parameters for the use of cryptography are taken into account.
+        should: |
+          + Preparation of technical rules containing requirements for encryption in order to protect information according to its classification.
+          + A concept for the application of cryptography is defined and implemented. The following aspects are considered:
+            - Cryptographic procedures,
+            - Key strengths,
+            - Procedures for the complete lifecycle of cryptographic keys, including generation, storage, archiving, retrieval, distribution, deactivation, renewal and deletion.
+          + An emergency process for restoring key material is established.
+      - name: To what extent is information protected during transfer?
+        isa: 5.1.2
+        reference: 'ISO 27001: A.13.2.1, A.13.2.3'
+        objective: When being transferred via public or private networks, information can in some circumstances be read or manipulated by unauthorized third parties. Therefore, requirements regarding the protection needs of the information must be determined and implemented by taking suitable measures during such transfer.
+        must: |
+          + The network services used to transfer information are identified and documented. 
+          + Policies and procedures in accordance with the classification requirements for the use of network services are defined and implemented.
+          + Measures for the protection of transferred contents against unauthorized access are implemented.
+        should: |
+          + Measures for ensuring correct addressing and correct transfer of information are implemented.
+          + Electronic data exchange is conducted using content or transport encryption according to the respective classification.
+    - name: Operations Security
+      isa: 5.2
+      questions:
+      - name: To what extent are changes managed? 
+        isa: 5.2.1
+        reference: 'IS0 27001: A.12.1.2'
+        objective: The objective is to ensure that information security aspects are considered in case of any changes to the organization, business processes and IT systems (Change Management) in order to prevent these changes from causing an uncontrolled reduction in the information security level. 
+        must: |
+          + Information security requirements for changes to the organization, business processes, IT systems are determined and applied.
+        should: |
+          + A formal approval procedure is established.
+          + Changes are verified and assessed for their potential impact on the information security.
+          + Changes affecting the information security are subjected to planning and testing.
+          + Procedures for fall-back in fault cases are taken into account.
+      - name: To what extent are development and testing environments separated from operational environments?
+        isa: 5.2.2
+        reference: 'IS0 27001: A.12.1.4'
+        objective: The objective of separating the development, testing and operational environments is to ensure that the availability, confidentiality and integrity of productive data are maintained. 
+        must: |
+          + The IT systems have been subjected to risk assessment in order to determine the necessity of their separation into development, testing and operational systems.
+          + A segmentation is implemented based on the results of risk analysis.
+        should: |
+          + The requirements for development and testing environments are determined and implemented. The following aspects are considered:
+            - Separation of development, testing and operational systems,
+            - No development and system tools on operational systems (except those required for operation),
+            - Use of different user profiles for development, testing and operational systems.
+      - name: To what extent are IT systems protected against malware?
+        isa: 5.2.3
+        reference: 'IS0 27001: A.12.2'
+        objective: The aim is to both technically and organizationally ensure the protection of IT systems against malware. 
+        must: |
+          + Requirements for protection against malware are determined.
+          + Technical and organizational measures for protection against malware are defined and implemented.
+        should: |
+          + Unnecessary network services are disabled.
+          + Access to network services is restricted to necessary access by means of suitable protective measures (see examples).
+          + Malware protection software is installed and updated automatically at regular intervals (e.g. virus scanner).
+          + Received files and programs are automatically inspected for malware prior to their execution (on-access scan).
+          + The entire data contents of all systems is regularly inspected for malware.
+          + Data transferred by central gateways (e.g. e-mail, internet, third-party networks) is automatically inspected by means of protection software:
+            - Encrypted connections are taken into account.
+          + Measures to prevent protection software from being deactivated or altered by users are defined and implemented.
+          + Case-related staff awareness measures.
+          + For IT systems operated without the use of malware protection software, alternative measures (e.g. special resilience measures, few services, no active users, network isolation) are implemented.
+        examples_normal_protection: |
+          Desktop firewall, Linking to loopback interfaces
+      - name: To what extent are event logs recorded and analyzed?
+        isa: 5.2.4
+        reference: 'IS0 27001: A.12.4.1, A.12.4.2, A.12.4.3'
+        objective: Event logs support the traceability of events in case of a security incident. This requires that events necessary to determine the causes are recorded and stored. In addition, the logging and analysis of activities in accordance with applicable legislation (e.g. Data Protection or Works Constitution Act) is required to determine which user account has made changes to IT systems.
+        must: |
+          + Information security requirements regarding the handling of event logs are determined and fulfilled.
+          + Security-relevant requirements regarding the logging of activities of system administrators and users are determined and fulfilled.
+          + The IT systems used are assessed regarding the necessity of logging.
+          + When using external IT services, information on the monitoring options is obtained and considered in the assessment.
+          + Event logs are checked regularly for rule violations and noticeable problems in compliance with the permissible legal and organizational provisions.
+        should: |
+          + A procedure for the escalation of relevant events to the responsible body (e.g. security incident report, data protection, corporate security, IT security) is defined and established.
+          + Event logs (contents and meta data) are protected against alteration. (e.g. by a dedicated environment).
+          + Adequate monitoring and recording of any actions on the network that are relevant to information security are established.
+      - name: To what extent are vulnerabilities identified and addressed? 
+        isa: 5.2.5
+        reference: 'IS0 27001: A.12.6'
+        objective: Vulnerabilities increase the risk of IT systems being unable to meet the requirements for confidentiality, availability and integrity. Exploitation of vulnerabilities is among the possible ways for attackers to gain access to the IT system or to threaten its operating stability.
+        must: |
+          + Information on technical vulnerabilities for the IT systems in use is gathered (e.g. information from the manufacturer, system audits, CVS database) and evaluated (e.g. Common Vulnerability Scoring System CVSS)
+          + Potentially affected IT systems and software are identified, assessed and any vulnerabilities are addressed.
+        should: |
+          + Information on technical vulnerabilities for the IT systems in use is gathered (e.g. information from the manufacturer, system audits, CVS database) and evaluated (e.g. Common Vulnerability Scoring System CVSS)
+          + Potentially affected IT systems and software are identified, assessed and any vulnerabilities are addressed.
+      - name: To what extent are IT systems technically checked (system audit)?
+        isa: 5.2.6
+        reference: 'IS0 27001: A12.7, A.18.2.3' 
+        objective: The objective of technical checks is the detection of states which can jeopardize the availability, confidentiality or integrity of IT systems. 
+        must: |
+          + Requirements for auditing IT systems are determined.
+          + The scope of the system audit is specified in a timely manner.
+          + System audits are coordinated with the operator and users of the IT systems.
+          + The results of system audits are stored in a traceable manner and reported to the relevant management.
+          + Measures are derived from the results.
+        should: |
+          + System audits are planned taking into account any security risks they might cause (e.g. disturbances).
+          + System audits are carried out by trained experts.
+          + Suitable tools (e.g. vulnerability scanners) are available for system audits.
+          + Within a reasonable period following completion of the audit, a report is prepared.
+      - name: To what extent is the network of the organization managed?
+        isa: 5.2.7
+        reference: 'IS0 27001: A.13.1.1, A.13.1.3'
+        objective: IT systems in a network are exposed to different risks or have different protection needs. In order to detect or prevent unintended data exchange or access between these IT systems, they are subdivided into suitable segments and access is controlled and monitored by means of security technologies.
+        must: |
+          + Requirements for the management and control of networks are determined and fulfilled.
+          + Requirements regarding network segmentation are determined and fulfilled.
+        should: |
+          + Procedures for the management and control of networks are defined.
+          + For network segmentation, the following aspects are considered:
+            - Limitations for connecting IT systems to the network,
+            - Use of security technologies,
+            - The increased risk due to network services accessible via the internet,
+            - Technology-specific separation options when using external IT services,
+            - Adequate separation between own networks and customer networks while considering customer requirements.
+        examples_normal_protection: |
+          Possible measures: 
+          - Use of security technologies such as firewall systems, intrusion detection and prevention systems (IDS/IPS), network management tools, security software for networks for preventing unintended data exchange.
+    - name: System acquisitions, requirement management and development
+      isa: 5.3
+      questions:
+      - name: To what extent is information security considered in new or further developed IT systems?
+        isa: 5.3.1
+        reference: 'IS0 27001: A.14.1'
+        objective: Information security is an integral part of the entire lifecycle of IT systems. This particularly includes consideration of information security requirements in the development or acquisition of IT systems.
+        must: |
+          + The information security requirements associated with the design and development of IT systems are determined and taken into account.
+          + The information security requirements associated with the acquisition or extension of IT systems and IT components are determined and taken into account.
+          + Information security requirements associated with changes to developed IT systems are taken into account.
+          + System approval tests are carried out under consideration of the information security requirements.
+        should: |
+          + Requirement specifications are prepared under consideration of the information security requirements.
+          + Requirement specifications are reviewed against the information security requirements.
+          + The IT system is reviewed for compliance with specifications prior to productive use.
+          + The use of productive data for testing purposes is avoided as far as possible (if applicable, anonymization or pseudonymization):
+            - Where productive data are used for testing purposes, it shall be ensured that the test system is provided with protective measures comparable to those on the operational system,
+            - Requirements for the lifecycle of test data (e.g. deletion, maximum lifetime on the IT system),
+            - case-related specifications for the generation of test data are defined.
+      - name: To what extent are requirements for network services defined?
+        isa: 5.3.2
+        reference: 'IS0 27001: A.13.1.2'
+        objective: Network services have different requirements for information security, quality of data transfer or management. It is important to know these criteria and the scope of use of the different network services.
+        must: |
+          + Requirements regarding the information security of network services are determined and fulfilled.
+        should: |
+          + A procedure for securing and using network services is defined and implemented.
+          + The requirements are agreed in the form of SLAs.
+          + Adequate redundancy solutions are implemented.
+      - name: To what extent is the return and secure removal of information assets from external IT services regulated? 
+        isa: 5.3.3
+        reference: 'IS0 27017: CLD.8.1.5'
+        objective: In order to ensure control over the information assets as the information owner, it is necessary that the information assets can be safely removed or are returned, if required, when terminating the IT service.
+        must: |
+          + A procedure for the return and secure removal of information assets from each external IT service is defined and implemented.
+        should: |
+          + A description of the termination process is given, adapted to any changes and contractually regulated.
+      - name: To what extent is information protected in shared external IT services?
+        isa: 5.3.4
+        reference: 'ISO 27017: CLD.9.5.1, CLD.9.5.2'
+        objective: Clear segregation between individual clients must be ensured such as to protect own information in external IT services at all times and to prevent it from being accessed by other organizations (clients).
+        must: + Effective segregation (e.g. segregation of clients) prevents access to own information by unauthorized users of other organizations.
+        should: |
+          + The provider’s segregation concept is documented and adapted to any changes. The following aspects are considered:
+            - Separation of data, functions, applications, operating system, storage system and network,
+            - Risk assessment for the operation of external software within the shared environment.
+  - chapter: Supplier Relationships
+    isa: 6
+    assessments:
+    - isa: 6.1
+      questions:
+      - name: To what extent is information security ensured among contractors and cooperation partners?
+        isa: 6.1.1
+        reference: 'ISO 27001: A.15.1, A.15.2.1'
+        objective: An appropriate level of information security is also maintained while collaborating with cooperation partners and contractors.
+        must: |
+          + Contractors and cooperation partners are subjected to a risk assessment with regard to information security.
+          + An appropriate level of information security is ensured by contractual agreements with contractors and cooperation partners.
+          + Where applicable, contractual agreements with clients are passed on to contractors and cooperation partners.
+          + Compliance with contractual agreements is verified.
+        should: |
+          + Contractors and cooperation partners are contractually obliged to also pass on any requirements regarding an appropriate level of information security also to their subcontractors.
+          + Service reports and documents by contractors and cooperation partners are reviewed.
+        examples_normal_protection: |
+          Identification of contractors and specification of protection needs and security requirements:
+          It is crucial for this evaluation, whether the contractor’s work includes
+          1) gaining access to information or security zones of the company with normal protection needs regarding confidentiality; or
+          2) providing or being able to modify relevant information with normal protection needs regarding integrity; or
+          3) having relevant influence on processes or IT systems with normal protection needs regarding availability (comp. to internal or customer-related SLAs).
+          Typical contractors with normal protection needs are e.g. cleaning services for general areas, classic logistics companies or maintenance staff.
+
+          The minimum requirements for information security (in relation to the respective protection goal) should be defined in a policy (e.g. information security policy for service providers). These requirements can be based on the requirements of the ISA described herein in addition to the company-specific requirements. This policy can be supplemented according to the specific order.
+
+          Ensuring implementation by the contractor:
+          The security requirements should be made known to the contractor, e.g. at procurement, in briefings (project meetings) by corresponding documents (e.g. information security policy for service providers) or when entering the premises (in case of contractors providing their services on site). Compliance with the information security requirements should be contractually fixed. At this point already, potential further subcontractors of the contractor should also be considered, as relevant. This can be done by individual agreements such as general terms and conditions of purchase, for example.  In many cases, suppliers (e.g. IT service providers) already assure compliance with security requirements in their standard contracts.
+
+          In order to ensure compliance with the requirements in a suitable manner, simple mechanisms should be established. This may include, for example:
+          - The submission of at least a self-disclosure confirmed by the management (e.g. VDA ISA) or an adequate attestation/certificate
+          - The right to and execution of irregular sampling and event-related inspections.
+        further_informations: |
+          Within the context of VDA ISA, the term contractor includes both classic suppliers and subcontractors but also classic service providers, freelancers or other partner companies. It also includes cooperation partners (e.g. academic institutions, institutes).
+
+          The explanations below describe a possible procedure for fulfilling the requirements:
+
+          Identification of contractors and specification of protection needs and security requirements:
+          At first, all contractors must be identified (e.g. via the list of creditors of the accountants department) in order to gain an initial overview. 
+          For all contractors, the respective protection needs should be specified and the security requirements derived according to their tasks and the relevance to own and customer’s processes. 
+          Generally, a large number of contractors is found not to require the assignment of relevant protection needs and to be therefore not subject to security requirements (e.g. suppliers of office stationary). 
+
+          Ensuring implementation by the contractor:
+          In the next step, the applicable requirements must be made known to all security-relevant contractors in a suitable manner and (contractually) fixed as being mandatory. Finally, a decision should be made as to how the implementation of the security requirements can be appropriately verified. For this purpose, adequate verification processes and procedures should be defined according to the respective risk (and the associated protection needs). Their purpose is to ensure that contractors implement the necessary requirements.
+
+          Establishment in standard processes:
+          The insights gained should be used to develop a comprehensible procedure and to integrate it into the existing processes of the B2B / supplier management. This starts with the selection of the contractor, where aspects of information security should already be taken into account alongside criteria such as quality, adherence to delivery dates, credit rating etc. The procurement process should be such that the relevance of information security has already been taken into account beforehand (with respect to the procurement decision; contract design; inspection requirements).
+          Furthermore, it is recommended to incorporate information security aspects into existing processes for supplier evaluation which have already been established by e.g. an existing quality management system.
+          Contractually specified deliverables (e.g. availability requirements) should be verified at regular intervals. This can be done by e.g. regular analysis of service reports and SLAs.
+      - name: To what extent is non-disclosure regarding the exchange of information contractually agreed?
+        isa: 6.1.2
+        reference: 'IS0 27001: A.13.2.2, A.13.2.4'
+        objective: Non-disclosure agreements provide legal protection of an organization’s information particularly where information is exchanged beyond the boundaries of the organization. 
+        must: |
+          + The non-disclosure requirements are determined and fulfilled.
+          + Requirements and procedures for applying non-disclosure agreements are known to all persons passing on information in need of protection.
+          + Valid non-disclosure agreements are concluded prior to  forwarding sensitive information.
+          + The requirements and procedures for the use of non-disclosure agreements and the handling of information requiring protection are reviewed at regular intervals.
+        should: |
+          + Non-disclosure agreement templates are available and checked for legal applicability.
+          + Non-disclosure agreements include the following information:
+            - the persons/organizations involved,
+            - the type of information covered by the agreement,
+            - the subject of the agreement,
+            - the validity period of the agreement,
+            - the responsibilities of the obliged party.
+          + Non-disclosure agreements include provisions for the handling of sensitive information beyond the contractual relationship.
+          + Options of demonstrating compliance with specifications (e.g. review by an independent third party or audit rights) are defined.
+          + A process for monitoring the validity period of temporary non-disclosure agreements and initiating their extension in due time is defined and implemented.
+  - chapter: Compliance
+    isa: 7
+    assessments:
+      - isa: 7.1
+        questions:
+        - name: To what extent is compliance with regulatory and contractual provisions ensured?
+          isa: 7.1.1
+          reference: 'IS0 27001: A.18.1.1, A.18.1.2, A.18.1.3, A.18.1.5'
+          objective: Non-compliance with legal, regulatory or contractual provisions can create risks to the information security of customers and the own organization. Therefore, it is essential to ensure that these provisions are known and observed.
+          must: |
+            + Legal, regulatory and contractual provisions of relevance to information security (see examples) are determined at regular intervals.
+            + Policies regarding compliance with the provisions are defined, implemented and communicated to the responsible persons.
+          should: |
+            + The integrity of records in accordance with the legal, regulatory or contractual provisions and business requirements is considered.
+          examples_normal_protection: |
+            Corresponding provisions can be included in the following, for example:
+            - Author’s rights
+            - Cryptography
+            - Copyright
+            - Intellectual property
+            - Archiving
+            - Information security legislation
+            - Data protection
+            - Trade Secrets Act
+            - Contractually agreed provisions (GTC, terms and conditions of purchase, framework contracts, individual contracts)
+        - name: To what extent is the protection of personally identifiable data taken into account when implementing information security? 
+          isa: 7.1.2
+          reference: 'IS0 27001: A.18.1.4'
+          objective: Privacy and protection of personally identifiable data are taken into account in the implementation of information security as required by relevant national legislation and regulations, where applicable.
+          must: |
+            + Legal and contractual information security requirements regarding the procedures and processes in the processing of personally identifiable data are determined.
+            + Regulations regarding the compliance with legal and contractual requirements for the protection of personally identifiable data are defined and known to the entrusted persons.
+            + Processes and procedures for the protection of personally identifiable data are taken into account in the information security management system.
+
+- catalog: Prototype Protection
+  chapters: 
+  - chapter: Prototype Protection
+    isa: 8
+    objective: |
+      Prototype protection includes vehicles, components and parts which are classified as requiring protection but have not yet been presented to the public and/or published in adequate form by the OEM.
+      The commissioning OEM department is responsible for classifying the protection need of vehicles, components and parts. The minimum requirements for prototype protection for the protection classes high and very high must be applied according to VDA ISA.
+    assessments:
+    - name: Physical and Environmental Security
+      isa: 8.1
+      objective: The requirements described in this clause apply to all companies which, on their own properties, manufacture, store or are provided for use vehicles, components or parts classified as requiring protection.
+      questions:
+      - name: To what extent is a security concept available describing minimum requirements regarding the physical and environmental security for prototype protection?
+        isa: 8.1.1
+        reference:
+        objective: The necessary measures for prototype protection must be applied to and implemented on properties and facilities of suppliers, development partners and service providers. A security concept must be established by the respective operator. Implementation and observation of the physical and environmental security measures defined in the security concept must be ensured by the responsible operator. 
+        must: |
+          + A security concept under consideration of the following aspects is established: 
+          - stability of outer skin,
+          - view and sight protection,
+          - protection against unauthorized entry and access control,
+          - intrusion monitoring,
+          - documented visitor management,
+          - client segregation.
+        should: |
+           + Perimeter security.
+      - name: To what extent is perimeter security existent preventing unauthorized access to protected property objects?
+        isa: 8.1.2
+        reference:
+        objective: Unauthorized access to properties where vehicles, components or parts classified as requiring protection are manufactured, processed or stored shall be prevented.
+        must: |
+          + Unauthorized access to properties is not possible.
+        should: |
+          + Suitable barriers are in place such as:
+            - artificial barriers (fence systems, walls),
+            - technical barriers (detection),
+            - natural barriers (growth, vegetation).
+      - name: To what extent is the outer skin of the protected buildings constructed such as to prevent removal or opening of outer-skin components using standard tools?
+        isa: 8.1.3
+        reference:
+        objective: Unauthorized access to buildings/security areas where vehicles, components or parts classified as requiring protection are manufactured, processed or stored shall be prevented.
+        must: |
+          + Unauthorized access to buildings/security areas is not possible.
+        should: |
+          + Solid construction (masonry, concrete, reinforced concrete or prestressed concrete).
+          + Windows and doors in the outer skin are to be built in compliance with RC2 or better.
+      - name: It must be ensured, that the camouflage regulations are known to each project member and observed in order to guarantee adequate view protection of trial vehicles. 
+        isa: 8.1.4
+        reference:
+        objective: It must be ensured that unauthorized viewing of vehicles, components or parts classified as requiring protection is prevented.
+        must: |
+          + The requirements for using the respective camouflage are known to the project members.
+          + Any changes to the camouflage are made upon documented agreement with the customer.
+          + A process for the immediate reporting of any damages to the camouflage is described and implemented.
+        should: |
+          + Sight protection through relevant glass surfaces is ensured.
+          + View into defined security areas through open doors/gates/windows is prevented.
+      - name: To what extent is the protection against unauthorized entry regulated in the form of access control?
+        isa: 8.1.5
+        reference: 
+        objective: It must be ensured that all points of access to security areas where vehicles, components or parts classified as requiring protection are manufactured, processed or stored are protected against unauthorized entry by adequate measures.
+        must: |
+          + At least one of the following three requirements must be implemented:
+          - mechanical locks with documented key assignment,
+          - electronic access systems with documented authorization |
+          assignment,
+          - personal access control including documentation.
+      - name: To what extent are the premises to be secured monitored for intrusion?
+        isa: 8.1.6
+        reference:
+        objective: It must be ensured that premises where vehicles, components or parts classified as requiring protection are manufactured, processed or stored are monitored for intrusion. Timely alarm processing is ensured.
+        must: |
+          + Intrusion monitoring of the premises to be secured is ensured:
+            - An intrusion detection system exists which complies with DIN EN 50131 or conforms to VDS or similar and functions with alarm tracking to a certified security service or control unit (e.g. according to DIN 77200, VdS 3138),
+            - or 24/7 guarding by a certified security service.
+          + Alarm plans are available.
+          + Timely alarm processing is ensured.
+      - name: To what extent is a documented visitor management in place?
+        isa: 8.1.7
+        reference:
+        objective: Protection against unauthorized access to security areas where vehicles, components or parts classified as requiring protection are manufactured, processed or stored, including traceable documentation.
+        must: |
+          + Registration obligation for all visitors.
+          + Documented non-disclosure obligation prior to access.
+          + Publication of security and visitor regulations.
+          + Country-specific legal provisions regarding data protection are to be observed.
+      - name: To what extent is on-site client segregation existent?
+        isa: 8.1.9
+        reference:
+        objective: In order to ensure protection of the client-specific know-how at all times, a clear segregation of clients must be ensured. This particularly involves protection against unauthorized viewing and access to areas where vehicles, components or parts classified as requiring protection are processed or stored.
+        must: |
+          + Spatial separation by staff-related or technical measures is in effect according to the following aspects:
+          - customers, and/or
+          - projects,
+          - where segregation is not in effect, explicit approval by the customer is required.
+    - name: Organizational Requirements
+      isa: 8.2
+      objective: The requirements described in this clause apply to all companies which manufacture or are provided for use vehicles, components or parts classified as requiring protection.
+      questions: 
+      - name: To what extent are non-disclosure agreements/obligations existent according to the valid contractual law?
+        isa: 8.2.1
+        reference: 
+        objective: When transmitting information classified as requiring protection, it must be ensured that external organizations are obliged to meet the information security requirements and that the related necessary measures are implemented. The necessary legal basis for this obligation is provided by non-disclosure agreements. Hence, it must be ensured that information classified as requiring protection is transmitted only if such a non-disclosure agreement has been entered and is legally effective.
+        must: |
+          + A non-disclosure agreement: 
+            - between contractor and customer (company level),
+            - with all employees and project members (personal obligation).
+          + Country-specific legal provisions regarding data protection are to be observed.
+      - name: To what extent are requirements for commissioning subcontractors known and fulfilled?
+        isa: 8.2.2
+        reference:
+        objective: When involving subcontractors, the minimum requirements for prototype protection must be met. 
+        must: |
+          + Approval by the original customer.
+          + contractually valid non-disclosure agreement exists:
+            - between contractor and subcontractor (company level),
+            - with all employees and project members of the subcontractor (personal obligation).
+          + Ensuring compliance with the security requirements of the actual customer (proof is obtained).
+          + Proof of the subcontractor’s compliance with minimum requirements for prototype protection (e.g. certificate, attestation) is provided.
+        should:
+      - name: To what extent do employees and project members evidently participate in training and awareness measures regarding the handling of prototypes?
+        isa: 8.2.3
+        reference: 
+        objective: In trainings/awareness seminars on the subject of prototype protection, employees must obtain the necessary knowledge and skills for a security-conscious handling of vehicles, components and parts classified as requiring protection. 
+        must: |
+          + Ensuring execution of trainings / awareness programs by the management.
+          + Training of employees and project members when joining the project regarding the handling of prototypes.
+          + Regular (at least annual) training of employees regarding the handling of prototypes.
+          + Ensuring knowledge among employees and project members regarding the respective protection needs and the resulting measures within the company.
+          + Mandatory participation of each employee and project member in the trainings and awareness measures.
+          + The completed measures are to be documented. 
+          + The training concept for prototype protection is an integral part of the general training concept (see also control question 2.1.3 Information Security).
+        should:
+      - name: To what extent are security classifications of the project and the resulting security measures known?
+        isa: 8.2.4
+        reference:
+        objective: It must be ensured that the security classification and requirements in relation to the project progress are known to and observed by each project member.
+        must: |
+          + Ensuring that the security classification and requirements in relation to the project progress are made known to each project member.
+          + Consideration of step-by-step plans, measures for secrecy and camouflage, development policies.
+          + The requirements are considered as a requirement regarding the information security of the project (see Controls 1.2.3 and 7.1.1 Information Security).
+        should:
+      - name: To what extent is a process defined for granting access to security areas?
+        isa: 8.2.5
+        reference:
+        objective: A process is defined for the protection against unauthorized access to security areas where vehicles, components or parts classified as requiring protection are manufactured, processed or stored.
+        must: |
+          + Responsibilities for access authorization are clearly specified and documented.
+          + A process for new assignments, changes and revocations of access rights is in place.
+          + Code of conduct in case of the loss/theft of access control means.
+      - name: To what extent are regulations for image recording and handling of created image material existent?
+        isa: 8.2.6
+        reference:
+        objective: Regulations for recording images of vehicles, components or parts classified as requiring protection must be defined in order to prevent unauthorized creation or transmission of such image material.
+        must: |
+          + Approval procedures for image recording.
+          + Specification for classification/categorization of image material.
+          + Secure storage of image material.
+          + Secure deletion/disposal of image material no longer required.
+          + Secured transmission/shipping of image material to authorized recipients only.
+      - name: To what extent is a process for carrying along and using mobile video and photography devices in(to) defined security areas established?
+        isa: 8.2.7
+        reference:
+        objective: A process is defined for carrying along and using mobile video and photography devices in(to) security areas where vehicles, components or parts classified as requiring protection are manufactured, processed or stored. Unauthorized creation or transmission of image material must be prevented.
+        must: |
+          + Specification for carrying along (e.g. sealed/unsealed, etc.).
+          + Specification for use (e.g. phone calls, photography, etc.).
+    - name: Handling of vehicles, components and parts
+      isa: 8.3
+      objective: |
+        A process for obtaining customer-specific requirements for the handling of trial vehicles classified as requiring protection is described and implemented. The requirements described in this chapter are not relevant to components and parts. 
+        When using own properties, the controls described in Clauses 8.1, 8.2 and 8.3 must also be verified. When not using own properties, merely the requirements of Clauses 8.2 and 8.3 must be met.
+      questions:
+      - name: To what extent are transports of vehicles, components or parts classified as requiring protection arranged according to the customer requirements?
+        isa: 8.3.1
+        reference:
+        objective: While being transported, vehicles, components and parts classified as requiring protection must be protected against unauthorized viewing, unauthorized image recording and access.
+        must: |
+          + A process for obtaining customer-specific requirements for the transport of vehicles, components and parts classified as requiring protection is described and implemented. 
+          + The security requirements defined by the customer are known and observed.
+          + The logistics/transport companies explicitly approved by the customer are commissioned.
+          + A process for reporting any security-relevant events to the customer is described and implemented.
+      - name: To what extent is it ensured that vehicles, components and parts classified as requiring protection are parked/stored in accordance with customer requirements?
+        isa: 8.3.2
+        reference:
+        objective: While being parked/stored, vehicles, components and parts classified as requiring protection must be protected against unauthorized viewing, unauthorized photography and access.
+        must: |
+          + The customer-specific requirements for parking/storage are verifiably known and observed.
+    - name: Requirements for trial vehicles
+      isa: 8.4
+      objective: |
+        A process for obtaining customer-specific requirements for the handling of trial vehicles classified as requiring protection is described and implemented. The requirements described in this chapter are not relevant to components and parts. 
+        When using own properties, the controls described in Clauses 8.1, 8.2 and 8.3 must also be verified. When not using own properties, merely the requirements of Clauses 8.2 and 8.3 must be met.
+      questions:
+      - name: To what extent are the predefined camouflage regulations implemented by the project members?
+        isa: 8.4.1
+        reference: 
+        objective: It must be ensured, that the camouflage regulations are known to each project member and observed in order to guarantee adequate view protection of trial vehicles. 
+        must: |
+          + The requirements for using the respective camouflage are known to the project members.
+          + Any changes to the camouflage are made upon documented agreement with the customer.
+          + A process for the immediate reporting of any damages to the camouflage is described and implemented.
+        should:
+      - name: To what extent are measures for protecting approved test and trial grounds observed/implemented?
+        isa: 8.4.2
+        reference:
+        objective: In order to maintain an undisturbed and secured trial operation on test and trial grounds, the respective protective measures defined by the customer must be observed. 
+        must: |
+          + A process for obtaining customer-specific requirements for the use of trial vehicles classified as requiring protection on test and trial grounds is described and implemented. 
+          + The following aspects must be known to users of test and trial grounds: 
+            - a current list of customer-approved test and trial grounds
+            - code of conduct for ensuring undisturbed trial operation 
+            - customer-defined protective measures These are implemented.
+      - name: To what extent are protective measures for approved test and trial drives in public observed/implemented?
+        isa: 8.4.3
+        reference:
+        objective: It must be ensured that the respective customer requirements for the operation of trial vehicles classified as requiring protection on public roads are known and observed.
+        must: |
+          + A process for obtaining customer-specific requirements for the operation of trial vehicles classified as requiring protection on public roads is described and implemented.
+          + Protective measures defined by the customer are known and observed.
+          + The code of conduct in case of special incidents (e.g. breakdown, accident, theft...) is known and observed.
+        should:
+    - name: Requirements for events and shootings
+      isa: 8.5
+      objective: |
+        Customer-specific security requirements for events and shootings involving vehicles, components or parts classified as requiring protection are known to each project member. This must be demonstrated by each company commissioned with the planning, preparation or execution of events or shootings.
+        When using own properties, the controls described in Clauses 8.1, 8.2 and 8.3 must also be verified. When not using own properties, merely the requirements of Clauses 8.2 and 8.3 must be met.
+      questions:
+      - name: To what extent are security requirements for presentations and events involving vehicles, components or parts classified as requiring protection known?
+        isa: 8.5.1
+        reference:
+        objective: It must be ensured that the respective customer-specific security requirements for presentations and events involving vehicles, components or parts classified as requiring protection are known.
+        must: |
+          + A process for obtaining customer-specific requirements for presentations and events involving vehicles, components or parts classified as requiring protection is described and implemented.
+          + Established and customer-approved security concepts (organizationally, technically,
+          staff-related).
+          + Code of conduct in case of special incidents.
+        should:
+      - name: To what extent are the protective measures for film and photo shootings involving vehicles, components or parts classified as requiring protection known?
+        isa: 8.5.2
+        reference:
+        objective: It must be ensured that the respective customer-specific security requirements for film and photo shootings involving vehicles, components or parts classified as requiring protection are known.
+        must: |
+          + A process for obtaining customer-specific requirements for film and photo shootings involving vehicles, components or parts classified as requiring protection is described and implemented.
+          + Proof of approval for the presumably used premises.
+          + Established and customer-approved security concepts (organizationally, technically,
+          staff-related).
+          + Code of conduct in case of special incidents.
+
+- catalog: Data Protection
+  chapters: 
+  - chapter: Data Protection
+    isa: 9
+    assessments:
+    - questions:
+      - name: To what extent is the implementation of data protection organized?
+        isa: 9.1
+        must: |
+          + Appointment of a data protection officer where legally required, otherwise appointment of a person responsible for data protection
+          + Organizational implementation of data protection
+            - Integration of the data protection officer into the corporate structure
+            - Voluntary or obligatory appointment of a data protection officer
+            - Full-time or part-time data protection officer
+            - Internal or external data protection officer
+            - Support of the data protection officer by directly assigned employees (department “Data Protection) depending on the company size
+            - Support of the data protection officer by data protection coordinators in the company departments depending on the size of the company (e.g. Marketing, Sales, Human Resources, Logistics, Development, etc.)
+      - name: To what extent are organizational measures taken in order to ensure that personally identifiable data is processed in conformance with legislation?
+        isa: 9.2
+        reference:
+        objective:
+        must: |
+          + Specification of data protection principles (processing of personally identifiable data) in a documented company-internal data protection policy (e.g. company-internal guideline).
+          + Implementation of company-internal steering committees or responsibilities - in collaboration with the data protection officer - addressing topics relevant to data protection.
+          + Implementation of a process which ensures the involvement of the data protection officer in any topics relevant to data protection (e.g. in the context of a data protection impact assessment). 
+          + Documentation of work processes when processing personally identifiable data.
+          + Documentation of statements and comments of the data protection officer regarding data protection law assessments.
+          + Implementation of a process by means of which - in case a subcontracting processor is commissioned - the processor is by contractual or other legal provisions subject to the same data protection obligations as specified by contract between the responsible person and the processor. 
+          + Company-internal work instructions or manuals in specific task fields concerning the processing of personally identifiable data.
+          + Employees’ (and, if applicable, subcontractors’) confidentiality obligation.
+          + Implementation of technical and organizational measures for supporting the controller in handling data subject rights as far as feasible and appropriate for processing.
+          + Implementation of reporting processes for immediately informing the customer, under consideration of any subcontractors, so the legal reporting deadlines for data protection incidents can be observed.
+          + Documentation of subcontracting relationships including contractual regulations with relevant subcontractors, where any right to inspect the contractual regulation is in any case limited to the subcontractor’s obligations concerning data protection.  
+          + Implementation of a process for the documentation of instructions in terms of data protection legislation.
+          + Ability to implement deletion concepts.
+          + Implementation of a procedure for regular review, assessment and evaluation of TOM.
+      - name: To what extent is it ensured that the internal processes or workflows are carried out according to the currently valid data protection regulations and that these are regularly subjected to a quality check?
+        isa: 9.3
+        must: |
+          + Proof of regular review and optimization of the data protection management system (e.g. certification).
+          + Measures for observing confidentiality and integrity when transferring personally identifiable data.
+          + Adequate protection mechanisms for reducing unauthorized access to personally identifiable data.
+          + Obligatory training of employees entrusted with the processing of personally identifiable data of the customer (e.g. classroom training, WBT).
+          + Ensuring implementation of contracts and customer instructions.
+      - name: To what extent are the relevant processing procedures documented with regard to their admissibility according to data protection law?
+        isa: 9.4
+        reference:
+        objective:
+        must: |
+          + Documentation of essential activities associated with the processing of personally identifiable data in accordance with legal requirements.
+          + Customer support for the execution of data protection impact assessments and the documentation of their results.
+          + Informing the customer when detecting unlawful data processing, where applicable, under consideration of different national legislations.
+        should:
